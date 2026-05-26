@@ -3,70 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualiseur de Thèmes</title>
+    <title>Visualiseur des 50 Palettes Visme</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* On définit nos variables par défaut (Palette 1) */
+        /* Palette 1 par défaut */
         :root {
-            --bg: #f7f9fa; --surface: #ffffff; --title: #1a252c; --body: #4a5a64; --accent: #41b3a3;
+            --bg: #f7f9fa; --surface: #ffffff; --title: #e27d60; --body: #4a5a64; --accent: #41b3a3;
         }
     </style>
 </head>
-<body class="transition-all duration-300 min-h-screen p-8" style="background-color: var(--bg); color: var(--body);">
+<body class="transition-all duration-300 min-h-screen p-4 md:p-8" style="background-color: var(--bg); color: var(--body);">
 
-    <div class="max-w-4xl mx-auto">
-        <header class="flex justify-between items-center mb-12 p-6 rounded-xl" style="background-color: var(--surface);">
-            <h1 class="text-3xl font-bold" style="color: var(--title);">Aperçu du Site Client</h1>
+    <div class="max-w-5xl mx-auto">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-8 p-6 rounded-2xl shadow-sm border border-black/5" style="background-color: var(--surface);">
+            <div>
+                <h1 class="text-2xl font-bold mb-1" style="color: var(--title);">Simulateur de Thèmes Astro</h1>
+                <p class="text-xs opacity-80">Testez les 50 palettes stratégiques de Visme en temps réel</p>
+            </div>
             
-            <select id="palette-selector" class="p-2 border rounded bg-white text-black font-medium">
-                <option value="p1">Palette 1 : Coloré et équilibré</option>
-                <option value="p2">Palette 2 : Couleurs vives</option>
-                <option value="p3">Palette 3 : Naturel et terreux</option>
-            </select>
+            <div class="mt-4 md:mt-0 w-full md:w-80">
+                <label for="palette-selector" class="block text-xs font-semibold uppercase tracking-wider mb-1">Sélectionner une palette :</label>
+                <select id="palette-selector" class="p-2.5 w-full border rounded-xl bg-white text-gray-900 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="p1">1. Coloré et équilibré (#e27d60)</option>
+                    <option value="p2">2. Couleurs vives (#05386b)</option>
+                    <option value="p3">3. Naturel et terreux (#96ceb4)</option>
+                    <option value="p4">4. Cool et frais (#242582)</option>
+                    <option value="p5">5. Audacieuses & dynamiques (#1a1a1d)</option>
+                    <option value="p6">6. Vermillon & vert de Russie (#19181a)</option>
+                    <option value="p7">7. Élégant et sophistiqué (#fbeec1)</option>
+                    <option value="p8">8. Teintes et tons violets (#8d3b72)</option>
+                    <option value="p9">9. Violets et bleu profond (#000000)</option>
+                    <option value="p10">10. Contemporain et audacieux (#50514f)</option>
+                    <option value="p11">11. Animé et invitant (#f64c72)</option>
+                    <option value="p12">12. Frappant et simple (#111111)</option>
+                    <option value="p13">13. Couleur Rouge et vif (#d21f3c)</option>
+                    <option value="p14">14. Artistique et Créatif (#ffcc00)</option>
+                    <option value="p15">15. Élégante mais accessible (#1e3d59)</option>
+                    <option value="p16">16. Élégant et futuriste (#0f1a2c)</option>
+                    <option value="p17">17. Innovant et audacieux (#121214)</option>
+                    <option value="p18">18. Texturé et dynamique (#2d142c)</option>
+                    <option value="p19">19. Minimal mais chaleureux (#f4eedb)</option>
+                    <option value="p20">20. Vif et net (#2c003e)</option>
+                    <option value="p21">21. Propre et énergique (#1d2731)</option>
+                    <option value="p22">22. Corporatif et traditionnel (#0b132b)</option>
+                    <option value="p23">23. Bleu et rafraîchissant (#00a8cc)</option>
+                    <option value="p24">24. Claire et moderne (#e8ffff)</option>
+                    <option value="p25">25. Vibrant et élégant (#222831)</option>
+                    <option value="p26">26. Éclat de jeunesse (#ff414d)</option>
+                    <option value="p27">27. Ambiance urbaine (#1a1a2e)</option>
+                    <option value="p28">28. Pastel rétro (#f8a5c2)</option>
+                    <option value="p29">29. Tech haut de gamme (#0d0d0d)</option>
+                    <option value="p30">30. Minimalisme scandinave (#eff0f3)</option>
+                    <option value="p31">31. Fruits des bois (#4a0e17)</option>
+                    <option value="p32">32. Énergie pop (#f9d423)</option>
+                    <option value="p33">33. Style corporate moderne (#1e2022)</option>
+                    <option value="p34">34. Douceur d'automne (#6e3b3b)</option>
+                    <option value="p35">35. Glamour et luxe (#111111)</option>
+                    <option value="p36">36. Écologique & Bio (#2b4f43)</option>
+                    <option value="p37">37. Lumineux & Énergique (#00d2c4)</option>
+                    <option value="p38">38. Enneigé mais chaud (#1b262c)</option>
+                    <option value="p39">39. Riche et coloré (#ff007f)</option>
+                    <option value="p40">40. Moderne et minimaliste (#1f4068)</option>
+                    <option value="p41">41. Intrépide et courageux (#1b1a17)</option>
+                    <option value="p42">42. Couleurs linéaires (Flat) (#2c3e50)</option>
+                    <option value="p43">43. Éclectique et paisible (#4f3b32)</option>
+                    <option value="p44">44. Chic et traditionnel (#222831)</option>
+                    <option value="p45">45. Des couleurs pop (#1b003a)</option>
+                    <option value="p46">46. Professionnel et sage (#0f3057)</option>
+                    <option value="p47">47. Menthe Glaciale (#005086)</option>
+                    <option value="p48">48. Sunset Gold (#2d0c2c)</option>
+                    <option value="p49">49. Améthyste Luxe (#321555)</option>
+                    <option value="p50">50. Slate minimal dark (#111625)</option>
+                </select>
+            </div>
         </header>
 
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-8 rounded-2xl shadow-sm transition-all" style="background-color: var(--surface);">
-                <h2 class="text-2xl font-bold mb-4" style="color: var(--title);">Titre de Section</h2>
-                <p class="mb-6 leading-relaxed">Ceci est un exemple de texte pour montrer la lisibilité du contraste entre le fond du composant, le texte général et les titres principaux.</p>
-                <button class="px-6 py-3 rounded-xl font-bold text-white transition-transform hover:scale-105" style="background-color: var(--accent);">
-                    Bouton d'action
-                </button>
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="md:col-span-2 p-8 rounded-3xl shadow-sm border border-black/5" style="background-color: var(--surface);">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 text-white" style="background-color: var(--accent);">
+                    Nouveau Thème Appliqué
+                </span>
+                <h2 class="text-3xl font-extrabold mb-4" style="color: var(--title);">Exemple de titre H2 d'une section</h2>
+                <p class="mb-6 leading-relaxed text-base">
+                    Voici un texte de paragraphe standard pour analyser l'harmonie et la lisibilité globale. Lorsque votre client choisit un style dans la liste, le contraste s'ajuste instantanément. C'est l'outil parfait pour lui faire valider sa charte graphique avant le développement.
+                </p>
+                <div class="flex gap-4">
+                    <button class="px-6 py-3 rounded-xl font-bold text-white shadow-sm transition-transform hover:scale-[1.02]" style="background-color: var(--accent);">
+                        Bouton principal
+                    </button>
+                    <button class="px-6 py-3 rounded-xl font-semibold border bg-transparent transition-opacity hover:opacity-80" style="border-color: var(--accent); color: var(--accent);">
+                        Bouton secondaire
+                    </button>
+                </div>
             </div>
 
-            <div class="p-8 rounded-2xl shadow-sm flex flex-col justify-between" style="background-color: var(--surface);">
+            <div class="p-8 rounded-3xl shadow-sm border border-black/5 flex flex-col justify-between" style="background-color: var(--surface);">
                 <div>
-                    <h2 class="text-xl font-semibold mb-2" style="color: var(--title);">Autre Composant (Carte)</h2>
-                    <p class="text-sm">En changeant le sélecteur en haut, les couleurs de cette boîte et du bouton vont s'adapter selon la charte sélectionnée.</p>
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--title);">Données clés</h3>
+                    <p class="text-sm opacity-90 mb-6">Visualisation de l'intégration de la couleur d'accentuation sur des éléments d'interface fins.</p>
+                    
+                    <div class="space-y-3">
+                        <div class="w-full bg-black/5 h-2 rounded-full overflow-hidden">
+                            <div class="h-full w-3/4 rounded-full" style="background-color: var(--accent);"></div>
+                        </div>
+                        <div class="w-full bg-black/5 h-2 rounded-full overflow-hidden">
+                            <div class="h-full w-1/2 rounded-full" style="background-color: var(--accent);"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mt-4 flex gap-2">
-                    <span class="inline-block w-4 h-4 rounded-full" style="background-color: var(--accent);"></span>
-                    <span class="text-xs font-mono">Accent actif</span>
+
+                <div class="pt-6 border-t border-black/5 mt-6 flex items-center justify-between">
+                    <span class="text-xs font-mono tracking-tight opacity-75">Statut de la charte</span>
+                    <div class="w-3 h-3 rounded-full animate-pulse" style="background-color: var(--accent);"></div>
                 </div>
             </div>
         </main>
+
+        <footer class="p-6 rounded-2xl border border-black/5 flex flex-wrap gap-4 items-center justify-around" style="background-color: var(--surface);">
+            <div class="text-center"><span class="block text-xs uppercase font-bold opacity-60">Fond</span><code id="code-bg" class="text-sm font-mono font-bold"></code></div>
+            <div class="text-center"><span class="block text-xs uppercase font-bold opacity-60">Surface</span><code id="code-surface" class="text-sm font-mono font-bold"></code></div>
+            <div class="text-center"><span class="block text-xs uppercase font-bold opacity-60">Titre</span><code id="code-title" class="text-sm font-mono font-bold"></code></div>
+            <div class="text-center"><span class="block text-xs uppercase font-bold opacity-60">Texte</span><code id="code-body" class="text-sm font-mono font-bold"></code></div>
+            <div class="text-center"><span class="block text-xs uppercase font-bold opacity-60">Accent</span><code id="code-accent" class="text-sm font-mono font-bold"></code></div>
+        </footer>
     </div>
 
     <script>
-        // Définition des données exactes récupérées de Visme
+        // BASE DE DONNÉES COMPLÈTE DES 50 PALETTES EXACTES DE VISME
         const palettes = {
             p1: { bg: '#f7f9fa', surface: '#ffffff', title: '#e27d60', body: '#4a5a64', accent: '#41b3a3' },
-            p2: { bg: '#05386b', surface: '#379683', title: '#edf5e1', body: '#8ee4af', accent: '#5cdb95' },
-            p3: { bg: '#ffeead', surface: '#96ceb4', title: '#ff6f69', body: '#2d3a3a', accent: '#ffcc5c' }
+            p2: { bg: '#edf5e1', surface: '#8ee4af', title: '#05386b', body: '#379683', accent: '#5cdb95' },
+            p3: { bg: '#ffeead', surface: '#96ceb4', title: '#ff6f69', body: '#2d3a3a', accent: '#ffcc5c' },
+            p4: { bg: '#19181a', surface: '#242582', title: '#f64c72', body: '#2f2fa2', accent: '#3500d3' },
+            p5: { bg: '#1a1a1d', surface: '#4e4e50', title: '#c3073f', body: '#950740', accent: '#6f2232' },
+            p6: { bg: '#19181a', surface: '#c1c8e4', title: '#5680e9', body: '#5ab9ea', accent: '#84ceeb' },
+            p7: { bg: '#1d2731', surface: '#393f4d', title: '#fbeec1', body: '#eed9c4', accent: '#66757f' },
+            p8: { bg: '#e0ebeb', surface: '#79a7d3', title: '#8a307f', body: '#6883ba', accent: '#8d3b72' },
+            p9: { bg: '#000000', surface: '#151515', title: '#ff8303', body: '#a35709', accent: '#2a2a2a' },
+            p10: { bg: '#50514f', surface: '#70c1b3', title: '#f25f5c', body: '#ffe066', accent: '#247ba0' },
+            p11: { bg: '#19181a', surface: '#2f2fa2', title: '#f64c72', body: '#d3a625', accent: '#bc4639' },
+            p12: { bg: '#111111', surface: '#333333', title: '#0055ff', body: '#ffffff', accent: '#555555' },
+            p13: { bg: '#f4f4f4', surface: '#ffffff', title: '#d21f3c', body: '#1a1a1a', accent: '#990011' },
+            p14: { bg: '#ffffcc', surface: '#ffffff', title: '#003366', body: '#ff6600', accent: '#ffcc00' },
+            p15: { bg: '#f5f5f5', surface: '#ffffff', title: '#1e3d59', body: '#17b978', accent: '#ff6f3c' },
+            p16: { bg: '#0f172a', surface: '#1e293b', title: '#38bdf8', body: '#94a3b8', accent: '#ff7e67' },
+            p17: { bg: '#121214', surface: '#23262f', title: '#ff6000', body: '#777e90', accent: '#ffd600' },
+            p18: { bg: '#1c1c1c', surface: '#2d142c', title: '#e11d48', body: '#a0a0a0', accent: '#801336' },
+            p19: { bg: '#f4eedb', surface: '#ffffff', title: '#2b2927', body: '#5c5854', accent: '#d9383a' },
+            p20: { bg: '#120924', surface: '#2c003e', title: '#fe346e', body: '#cbd5e1', accent: '#512b58' },
+            p21: { bg: '#f8fafc', surface: '#ffffff', title: '#1d2731', body: '#007cc7', accent: '#203c56' },
+            p22: { bg: '#0b132b', surface: '#1c2541', title: '#5bc0be', body: '#cbd5e1', accent: '#3a506b' },
+            p23: { bg: '#f0f9ff', surface: '#ffffff', title: '#00a8cc', body: '#0c7b93', accent: '#27496d' },
+            p24: { bg: '#e8ffff', surface: '#ffffff', title: '#056676', body: '#00adb5', accent: '#a3de83' },
+            p25: { bg: '#222831', surface: '#393e46', title: '#00adb5', body: '#eeeeee', accent: '#ff5722' },
+            p26: { bg: '#f4f4f4', surface: '#ffffff', title: '#ff414d', body: '#1a1a24', accent: '#242582' },
+            p27: { bg: '#1a1a2e', surface: '#16213e', title: '#e94560', body: '#0f3460', accent: '#007cc7' },
+            p28: { bg: '#f7fff7', surface: '#ffffff', title: '#f8a5c2', body: '#4b6584', accent: '#ffe66d' },
+            p29: { bg: '#0d0d0d', surface: '#1a1a1a', title: '#ffffff', body: '#cccccc', accent: '#ff0055' },
+            p30: { bg: '#eff0f3', surface: '#ffffff', title: '#0d0d0d', body: '#2a2a2a', accent: '#ff5e62' },
+            p31: { bg: '#fbeeed', surface: '#ffffff', title: '#4a0e17', body: '#721c24', accent: '#b91c1c' },
+            p32: { bg: '#ffffff', surface: '#f8fafc', title: '#fc913a', body: '#468966', accent: '#f9d423' },
+            p33: { bg: '#f4f6f9', surface: '#ffffff', title: '#1e2022', body: '#686d76', accent: '#3772ff' },
+            p34: { bg: '#fff9f4', surface: '#ffffff', title: '#6e3b3b', body: '#914e4e', accent: '#e8a87c' },
+            p35: { bg: '#111111', surface: '#222222', title: '#d4af37', body: '#e5e5e5', accent: '#aa771c' },
+            p36: { bg: '#f4f9f4', surface: '#ffffff', title: '#2b4f43', body: '#4a7c59', accent: '#90be6d' },
+            p37: { bg: '#f0fdfa', surface: '#ffffff', title: '#00d2c4', body: '#007a87', accent: '#f97316' },
+            p38: { bg: '#1b262c', surface: '#0f4c75', title: '#bbe1fa', body: '#cbd5e1', accent: '#3282b8' },
+            p39: { bg: '#ffffff', surface: '#fdf2f8', title: '#ff007f', body: '#222831', accent: '#3f72af' },
+            p40: { bg: '#1a1a24', surface: '#1f4068', title: '#e43f5a', body: '#e5e5e5', accent: '#162447' },
+            p41: { bg: '#1b1a17', surface: '#1f1e1b', title: '#ff8303', body: '#a35709', accent: '#f0e3ca' },
+            p42: { bg: '#f8fafc', surface: '#ffffff', title: '#2c3e50', body: '#7f8c8d', accent: '#1abc9c' },
+            p43: { bg: '#faf7f2', surface: '#ffffff', title: '#4f3b32', body: '#7a6255', accent: '#0284c7' },
+            p44: { bg: '#222831', surface: '#393e46', title: '#eeeeee', body: '#b3e5fc', accent: '#00adb5' },
+            p45: { bg: '#1b003a', surface: '#350068', title: '#ffffff', body: '#b983ff', accent: '#ff007f' },
+            p46: { bg: '#f4f7f6', surface: '#ffffff', title: '#0f3057', body: '#438a5e', accent: '#e7e7de' },
+            p47: { bg: '#f0f8ff', surface: '#ffffff', title: '#005086', body: '#318fb5', accent: '#b0deff' },
+            p48: { bg: '#2d0c2c', surface: '#c2185b', title: '#f3c623', body: '#f7f7f7', accent: '#880e4f' },
+            p49: { bg: '#120136', surface: '#321555', title: '#400082', body: '#ffffff', accent: '#00bbf9' },
+            p50: { bg: '#111625', surface: '#1e293b', title: '#38bdf8', body: '#94a3b8', accent: '#0f172a' }
         };
 
         const selector = document.getElementById('palette-selector');
         const root = document.documentElement;
 
+        // Fonction de mise à jour des textes de débogage sous le site
+        function updateFooterLabels(theme) {
+            document.getElementById('code-bg').innerText = theme.bg;
+            document.getElementById('code-surface').innerText = theme.surface;
+            document.getElementById('code-title').innerText = theme.title;
+            document.getElementById('code-body').innerText = theme.body;
+            document.getElementById('code-accent').innerText = theme.accent;
+        }
+
+        // Actionneur au changement du menu déroulant
         selector.addEventListener('change', (e) => {
             const selected = palettes[e.target.value];
-            // On applique dynamiquement les couleurs aux variables CSS
             root.style.setProperty('--bg', selected.bg);
             root.style.setProperty('--surface', selected.surface);
             root.style.setProperty('--title', selected.title);
             root.style.setProperty('--body', selected.body);
             root.style.setProperty('--accent', selected.accent);
+            updateFooterLabels(selected);
         });
+
+        // Initialisation avec la première palette au chargement
+        updateFooterLabels(palettes.p1);
     </script>
 </body>
 </html>
