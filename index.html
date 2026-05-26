@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualiseur de Thèmes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* On définit nos variables par défaut (Palette 1) */
+        :root {
+            --bg: #f7f9fa; --surface: #ffffff; --title: #1a252c; --body: #4a5a64; --accent: #41b3a3;
+        }
+    </style>
+</head>
+<body class="transition-all duration-300 min-h-screen p-8" style="background-color: var(--bg); color: var(--body);">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="flex justify-between items-center mb-12 p-6 rounded-xl" style="background-color: var(--surface);">
+            <h1 class="text-3xl font-bold" style="color: var(--title);">Aperçu du Site Client</h1>
+            
+            <select id="palette-selector" class="p-2 border rounded bg-white text-black font-medium">
+                <option value="p1">Palette 1 : Coloré et équilibré</option>
+                <option value="p2">Palette 2 : Couleurs vives</option>
+                <option value="p3">Palette 3 : Naturel et terreux</option>
+            </select>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 rounded-2xl shadow-sm transition-all" style="background-color: var(--surface);">
+                <h2 class="text-2xl font-bold mb-4" style="color: var(--title);">Titre de Section</h2>
+                <p class="mb-6 leading-relaxed">Ceci est un exemple de texte pour montrer la lisibilité du contraste entre le fond du composant, le texte général et les titres principaux.</p>
+                <button class="px-6 py-3 rounded-xl font-bold text-white transition-transform hover:scale-105" style="background-color: var(--accent);">
+                    Bouton d'action
+                </button>
+            </div>
+
+            <div class="p-8 rounded-2xl shadow-sm flex flex-col justify-between" style="background-color: var(--surface);">
+                <div>
+                    <h2 class="text-xl font-semibold mb-2" style="color: var(--title);">Autre Composant (Carte)</h2>
+                    <p class="text-sm">En changeant le sélecteur en haut, les couleurs de cette boîte et du bouton vont s'adapter selon la charte sélectionnée.</p>
+                </div>
+                <div class="mt-4 flex gap-2">
+                    <span class="inline-block w-4 h-4 rounded-full" style="background-color: var(--accent);"></span>
+                    <span class="text-xs font-mono">Accent actif</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Définition des données exactes récupérées de Visme
+        const palettes = {
+            p1: { bg: '#f7f9fa', surface: '#ffffff', title: '#e27d60', body: '#4a5a64', accent: '#41b3a3' },
+            p2: { bg: '#05386b', surface: '#379683', title: '#edf5e1', body: '#8ee4af', accent: '#5cdb95' },
+            p3: { bg: '#ffeead', surface: '#96ceb4', title: '#ff6f69', body: '#2d3a3a', accent: '#ffcc5c' }
+        };
+
+        const selector = document.getElementById('palette-selector');
+        const root = document.documentElement;
+
+        selector.addEventListener('change', (e) => {
+            const selected = palettes[e.target.value];
+            // On applique dynamiquement les couleurs aux variables CSS
+            root.style.setProperty('--bg', selected.bg);
+            root.style.setProperty('--surface', selected.surface);
+            root.style.setProperty('--title', selected.title);
+            root.style.setProperty('--body', selected.body);
+            root.style.setProperty('--accent', selected.accent);
+        });
+    </script>
+</body>
+</html>
