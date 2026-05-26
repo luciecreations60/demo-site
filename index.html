@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualiseur des 50 Palettes Visme</title>
+    <title>Visualiseur des 50 Palettes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Palette 1 par défaut */
@@ -17,63 +17,63 @@
     <div class="max-w-5xl mx-auto">
         <header class="flex flex-col md:flex-row justify-between items-center mb-8 p-6 rounded-2xl shadow-sm border border-black/5" style="background-color: var(--surface);">
             <div>
-                <h1 class="text-2xl font-bold mb-1" style="color: var(--title);">Simulateur de Thèmes Astro</h1>
-                <p class="text-xs opacity-80">Testez les 50 palettes stratégiques de Visme en temps réel</p>
+                <h1 class="text-2xl font-bold mb-1" style="color: var(--title);">Simulateur de Thèmes</h1>
+                <p class="text-xs opacity-80">Testez les 50 palettes en temps réel</p>
             </div>
             
             <div class="mt-4 md:mt-0 w-full md:w-80">
                 <label for="palette-selector" class="block text-xs font-semibold uppercase tracking-wider mb-1">Sélectionner une palette :</label>
                 <select id="palette-selector" class="p-2.5 w-full border rounded-xl bg-white text-gray-900 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <option value="p1">1. Coloré et équilibré (#e27d60)</option>
-                    <option value="p2">2. Couleurs vives (#05386b)</option>
-                    <option value="p3">3. Naturel et terreux (#96ceb4)</option>
-                    <option value="p4">4. Cool et frais (#242582)</option>
-                    <option value="p5">5. Audacieuses & dynamiques (#1a1a1d)</option>
-                    <option value="p6">6. Vermillon & vert de Russie (#19181a)</option>
-                    <option value="p7">7. Élégant et sophistiqué (#fbeec1)</option>
-                    <option value="p8">8. Teintes et tons violets (#8d3b72)</option>
-                    <option value="p9">9. Violets et bleu profond (#000000)</option>
-                    <option value="p10">10. Contemporain et audacieux (#50514f)</option>
-                    <option value="p11">11. Animé et invitant (#f64c72)</option>
-                    <option value="p12">12. Frappant et simple (#111111)</option>
-                    <option value="p13">13. Couleur Rouge et vif (#d21f3c)</option>
-                    <option value="p14">14. Artistique et Créatif (#ffcc00)</option>
-                    <option value="p15">15. Élégante mais accessible (#1e3d59)</option>
-                    <option value="p16">16. Élégant et futuriste (#0f1a2c)</option>
-                    <option value="p17">17. Innovant et audacieux (#121214)</option>
-                    <option value="p18">18. Texturé et dynamique (#2d142c)</option>
-                    <option value="p19">19. Minimal mais chaleureux (#f4eedb)</option>
-                    <option value="p20">20. Vif et net (#2c003e)</option>
-                    <option value="p21">21. Propre et énergique (#1d2731)</option>
-                    <option value="p22">22. Corporatif et traditionnel (#0b132b)</option>
-                    <option value="p23">23. Bleu et rafraîchissant (#00a8cc)</option>
-                    <option value="p24">24. Claire et moderne (#e8ffff)</option>
-                    <option value="p25">25. Vibrant et élégant (#222831)</option>
-                    <option value="p26">26. Éclat de jeunesse (#ff414d)</option>
-                    <option value="p27">27. Ambiance urbaine (#1a1a2e)</option>
-                    <option value="p28">28. Pastel rétro (#f8a5c2)</option>
-                    <option value="p29">29. Tech haut de gamme (#0d0d0d)</option>
-                    <option value="p30">30. Minimalisme scandinave (#eff0f3)</option>
-                    <option value="p31">31. Fruits des bois (#4a0e17)</option>
-                    <option value="p32">32. Énergie pop (#f9d423)</option>
-                    <option value="p33">33. Style corporate moderne (#1e2022)</option>
-                    <option value="p34">34. Douceur d'automne (#6e3b3b)</option>
-                    <option value="p35">35. Glamour et luxe (#111111)</option>
-                    <option value="p36">36. Écologique & Bio (#2b4f43)</option>
-                    <option value="p37">37. Lumineux & Énergique (#00d2c4)</option>
-                    <option value="p38">38. Enneigé mais chaud (#1b262c)</option>
-                    <option value="p39">39. Riche et coloré (#ff007f)</option>
-                    <option value="p40">40. Moderne et minimaliste (#1f4068)</option>
-                    <option value="p41">41. Intrépide et courageux (#1b1a17)</option>
-                    <option value="p42">42. Couleurs linéaires (Flat) (#2c3e50)</option>
-                    <option value="p43">43. Éclectique et paisible (#4f3b32)</option>
-                    <option value="p44">44. Chic et traditionnel (#222831)</option>
-                    <option value="p45">45. Des couleurs pop (#1b003a)</option>
-                    <option value="p46">46. Professionnel et sage (#0f3057)</option>
-                    <option value="p47">47. Menthe Glaciale (#005086)</option>
-                    <option value="p48">48. Sunset Gold (#2d0c2c)</option>
-                    <option value="p49">49. Améthyste Luxe (#321555)</option>
-                    <option value="p50">50. Slate minimal dark (#111625)</option>
+                    <option value="p1">1. Coloré et équilibré</option>
+                    <option value="p2">2. Couleurs vives</option>
+                    <option value="p3">3. Naturel et terreux</option>
+                    <option value="p4">4. Cool et frais</option>
+                    <option value="p5">5. Audacieuses & dynamiques</option>
+                    <option value="p6">6. Vermillon & vert de Russie</option>
+                    <option value="p7">7. Élégant et sophistiqué</option>
+                    <option value="p8">8. Teintes et tons violets</option>
+                    <option value="p9">9. Violets et bleu profond</option>
+                    <option value="p10">10. Contemporain et audacieux</option>
+                    <option value="p11">11. Animé et invitant</option>
+                    <option value="p12">12. Frappant et simple</option>
+                    <option value="p13">13. Couleur Rouge et vif</option>
+                    <option value="p14">14. Artistique et Créatif</option>
+                    <option value="p15">15. Élégante mais accessible</option>
+                    <option value="p16">16. Élégant et futuriste</option>
+                    <option value="p17">17. Innovant et audacieux</option>
+                    <option value="p18">18. Texturé et dynamique</option>
+                    <option value="p19">19. Minimal mais chaleureux</option>
+                    <option value="p20">20. Vif et net</option>
+                    <option value="p21">21. Propre et énergique</option>
+                    <option value="p22">22. Corporatif et traditionnel</option>
+                    <option value="p23">23. Bleu et rafraîchissant</option>
+                    <option value="p24">24. Claire et moderne</option>
+                    <option value="p25">25. Vibrant et élégant</option>
+                    <option value="p26">26. Éclat de jeunesse</option>
+                    <option value="p27">27. Ambiance urbaine</option>
+                    <option value="p28">28. Pastel rétro</option>
+                    <option value="p29">29. Tech haut de gamme</option>
+                    <option value="p30">30. Minimalisme scandinave</option>
+                    <option value="p31">31. Fruits des bois</option>
+                    <option value="p32">32. Énergie pop</option>
+                    <option value="p33">33. Style corporate moderne</option>
+                    <option value="p34">34. Douceur d'automne</option>
+                    <option value="p35">35. Glamour et luxe</option>
+                    <option value="p36">36. Écologique & Bio</option>
+                    <option value="p37">37. Lumineux & Énergique</option>
+                    <option value="p38">38. Enneigé mais chaud</option>
+                    <option value="p39">39. Riche et coloré</option>
+                    <option value="p40">40. Moderne et minimaliste</option>
+                    <option value="p41">41. Intrépide et courageux</option>
+                    <option value="p42">42. Couleurs linéaires (Flat)</option>
+                    <option value="p43">43. Éclectique et paisible</option>
+                    <option value="p44">44. Chic et traditionnel</option>
+                    <option value="p45">45. Des couleurs pop</option>
+                    <option value="p46">46. Professionnel et sage</option>
+                    <option value="p47">47. Menthe Glaciale</option>
+                    <option value="p48">48. Sunset Gold</option>
+                    <option value="p49">49. Améthyste Luxe</option>
+                    <option value="p50">50. Slate minimal dark</option>
                 </select>
             </div>
         </header>
@@ -85,7 +85,7 @@
                 </span>
                 <h2 class="text-3xl font-extrabold mb-4" style="color: var(--title);">Exemple de titre H2 d'une section</h2>
                 <p class="mb-6 leading-relaxed text-base">
-                    Voici un texte de paragraphe standard pour analyser l'harmonie et la lisibilité globale. Lorsque votre client choisit un style dans la liste, le contraste s'ajuste instantanément. C'est l'outil parfait pour lui faire valider sa charte graphique avant le développement.
+                    Voici un texte de paragraphe standard pour analyser l'harmonie et la lisibilité globale. Lorsque vous choisissez un style dans la liste, le contraste s'ajuste instantanément.
                 </p>
                 <div class="flex gap-4">
                     <button class="px-6 py-3 rounded-xl font-bold text-white shadow-sm transition-transform hover:scale-[1.02]" style="background-color: var(--accent);">
@@ -132,7 +132,8 @@
         // BASE DE DONNÉES COMPLÈTE DES 50 PALETTES EXACTES DE VISME
         const palettes = {
             p1: { bg: '#f7f9fa', surface: '#ffffff', title: '#e27d60', body: '#4a5a64', accent: '#41b3a3' },
-            p2: { bg: '#edf5e1', surface: '#8ee4af', title: '#05386b', body: '#379683', accent: '#5cdb95' },
+            p1a: { bg: '#e27d60', surface: '#85dcb', title: '#e8a87c', body: '#c38d9e', accent: '#41b3a3' },
+            p2: { bg: '#edf5e1', surface: '#2f2fa2', title: '#242582', body: '#379683', accent: '#5cdb95' },
             p3: { bg: '#ffeead', surface: '#96ceb4', title: '#ff6f69', body: '#2d3a3a', accent: '#ffcc5c' },
             p4: { bg: '#19181a', surface: '#242582', title: '#f64c72', body: '#2f2fa2', accent: '#3500d3' },
             p5: { bg: '#1a1a1d', surface: '#4e4e50', title: '#c3073f', body: '#950740', accent: '#6f2232' },
