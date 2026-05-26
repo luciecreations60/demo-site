@@ -25,22 +25,22 @@
                 <label for="palette-selector" class="block text-xs font-semibold uppercase tracking-wider mb-1">Sélectionner une palette :</label>
                 <select id="palette-selector" class="p-2.5 w-full border rounded-xl bg-white text-gray-900 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
                     <option value="p1">1. Coloré et équilibré</option>
+                    <option value="pa">PAYSAGISTE / JARDINIER (Ambiance : Nature, Confiance, Écologie)</option>
+                    <option value="pb">FLEURISTE / PÉPINIÉRISTE (Ambiance : Élégance, Créativité, Fraîcheur)</option>
+                    <option value="pc">PLOMBIER / CHAUFFAGISTE (Ambiance : Urgence, Eau, Sécurité)</option>
+                    <option value="pd">ÉLECTRICIEN (Ambiance : Énergie, Précision, Technologie)</option>
+                    <option value="pe">MAÇON / PEINTRE / MENUISIER (Ambiance : Chantier, Solide, Matière)</option>
+                    <option value="pf">THÈME GÉNÉRIQUE POLYVALENT (Pour n'importe quel autre artisan)</option>
                     <option value="p2">2. Couleurs vives</option>
                     <option value="p3">3. Naturel et terreux</option>
-                    <option value="p4">4. Cool et frais</option>
-                    <option value="p5">5. Audacieuses & dynamiques</option>
-                    <option value="p6">6. Vermillon & vert de Russie</option>
                     <option value="p7">7. Élégant et sophistiqué</option>
-                    <option value="p8">8. Teintes et tons violets</option>
                     <option value="p9">9. Violets et bleu profond</option>
                     <option value="p10">10. Contemporain et audacieux</option>
                     <option value="p11">11. Animé et invitant</option>
                     <option value="p12">12. Frappant et simple</option>
                     <option value="p13">13. Couleur Rouge et vif</option>
-                    <option value="p14">14. Artistique et Créatif</option>
                     <option value="p15">15. Élégante mais accessible</option>
                     <option value="p16">16. Élégant et futuriste</option>
-                    <option value="p17">17. Innovant et audacieux</option>
                     <option value="p18">18. Texturé et dynamique</option>
                     <option value="p19">19. Minimal mais chaleureux</option>
                     <option value="p20">20. Vif et net</option>
@@ -50,8 +50,6 @@
                     <option value="p24">24. Claire et moderne</option>
                     <option value="p25">25. Vibrant et élégant</option>
                     <option value="p26">26. Éclat de jeunesse</option>
-                    <option value="p27">27. Ambiance urbaine</option>
-                    <option value="p28">28. Pastel rétro</option>
                     <option value="p29">29. Tech haut de gamme</option>
                     <option value="p30">30. Minimalisme scandinave</option>
                     <option value="p31">31. Fruits des bois</option>
@@ -64,7 +62,6 @@
                     <option value="p38">38. Enneigé mais chaud</option>
                     <option value="p39">39. Riche et coloré</option>
                     <option value="p40">40. Moderne et minimaliste</option>
-                    <option value="p41">41. Intrépide et courageux</option>
                     <option value="p42">42. Couleurs linéaires (Flat)</option>
                     <option value="p43">43. Éclectique et paisible</option>
                     <option value="p44">44. Chic et traditionnel</option>
@@ -72,7 +69,6 @@
                     <option value="p46">46. Professionnel et sage</option>
                     <option value="p47">47. Menthe Glaciale</option>
                     <option value="p48">48. Sunset Gold</option>
-                    <option value="p49">49. Améthyste Luxe</option>
                     <option value="p50">50. Slate minimal dark</option>
                 </select>
             </div>
@@ -132,22 +128,22 @@
         // BASE DE DONNÉES COMPLÈTE DES 50 PALETTES EXACTES DE VISME
         const palettes = {
             p1: { bg: '#f7f9fa', surface: '#ffffff', title: '#e27d60', body: '#4a5a64', accent: '#41b3a3' },
+            pa: { bg: '#f4f7f5', surface: '#ffffff', title: '#1e3f20', body: '#4a554d', accent: '#2e7d32' },
+            pb: { bg: '#faf6f0', surface: '#ffffff', title: '#4a283d', body: '#6b5b65', accent: '#d4a373' },
+            pc: { bg: '#f0f4f8', surface: '#ffffff', title: '#0f2d4a', body: '#48535e', accent: '#0070f3' },
+            pd: { bg: '#111827', surface: '#1f2937', title: '#ffffff', body: '#9ca3af', accent: '#f59e0b' },
+            pe: { bg: '#fcfbf9', surface: '#ffffff', title: '#292524', body: '#57534e', accent: '#ea580c' },
+            pf: { bg: '#f8fafc', surface: '#ffffff', title: '#0f172a', body: '#334155', accent: '#0d9488' },
             p2: { bg: '#edf5e1', surface: '#2f2fa2', title: '#ffffff', body: '#379683', accent: '#5cdb95' },
             p3: { bg: '#ffeec1', surface: '#96ceb4', title: '#ff6f69', body: '#2d3a3a', accent: '#ffcc5c' },
-            p4: { bg: '#19181a', surface: '#242582', title: '#f64c72', body: '#2f2fa2', accent: '#3500d3' },
-            p5: { bg: '#1a1a1d', surface: '#4e4e50', title: '#c3073f', body: '#950740', accent: '#6f2232' },
-            p6: { bg: '#19181a', surface: '#c1c8e4', title: '#5680e9', body: '#5ab9ea', accent: '#84ceeb' },
             p7: { bg: '#1d2731', surface: '#393f4d', title: '#fbeec1', body: '#eed9c4', accent: '#66757f' },
-            p8: { bg: '#e0ebeb', surface: '#79a7d3', title: '#8a307f', body: '#6883ba', accent: '#8d3b72' },
             p9: { bg: '#000000', surface: '#151515', title: '#ff8303', body: '#a35709', accent: '#2a2a2a' },
             p10: { bg: '#50514f', surface: '#70c1b3', title: '#f25f5c', body: '#ffe066', accent: '#247ba0' },
             p11: { bg: '#19181a', surface: '#2f2fa2', title: '#f64c72', body: '#d3a625', accent: '#bc4639' },
             p12: { bg: '#111111', surface: '#333333', title: '#0055ff', body: '#ffffff', accent: '#555555' },
             p13: { bg: '#f4f4f4', surface: '#ffffff', title: '#d21f3c', body: '#1a1a1a', accent: '#990011' },
-            p14: { bg: '#ffffcc', surface: '#ffffff', title: '#003366', body: '#ff6600', accent: '#ffcc00' },
             p15: { bg: '#f5f5f5', surface: '#ffffff', title: '#1e3d59', body: '#17b978', accent: '#ff6f3c' },
             p16: { bg: '#0f172a', surface: '#1e293b', title: '#38bdf8', body: '#94a3b8', accent: '#ff7e67' },
-            p17: { bg: '#121214', surface: '#23262f', title: '#ff6000', body: '#777e90', accent: '#ffd600' },
             p18: { bg: '#1c1c1c', surface: '#2d142c', title: '#e11d48', body: '#a0a0a0', accent: '#801336' },
             p19: { bg: '#f4eedb', surface: '#ffffff', title: '#2b2927', body: '#5c5854', accent: '#d9383a' },
             p20: { bg: '#120924', surface: '#2c003e', title: '#fe346e', body: '#cbd5e1', accent: '#512b58' },
@@ -157,8 +153,6 @@
             p24: { bg: '#e8ffff', surface: '#ffffff', title: '#056676', body: '#00adb5', accent: '#a3de83' },
             p25: { bg: '#222831', surface: '#393e46', title: '#00adb5', body: '#eeeeee', accent: '#ff5722' },
             p26: { bg: '#f4f4f4', surface: '#ffffff', title: '#ff414d', body: '#1a1a24', accent: '#242582' },
-            p27: { bg: '#1a1a2e', surface: '#16213e', title: '#e94560', body: '#0f3460', accent: '#007cc7' },
-            p28: { bg: '#f7fff7', surface: '#ffffff', title: '#f8a5c2', body: '#4b6584', accent: '#ffe66d' },
             p29: { bg: '#0d0d0d', surface: '#1a1a1a', title: '#ffffff', body: '#cccccc', accent: '#ff0055' },
             p30: { bg: '#eff0f3', surface: '#ffffff', title: '#0d0d0d', body: '#2a2a2a', accent: '#ff5e62' },
             p31: { bg: '#fbeeed', surface: '#ffffff', title: '#4a0e17', body: '#721c24', accent: '#b91c1c' },
@@ -171,7 +165,6 @@
             p38: { bg: '#1b262c', surface: '#0f4c75', title: '#bbe1fa', body: '#cbd5e1', accent: '#3282b8' },
             p39: { bg: '#ffffff', surface: '#fdf2f8', title: '#ff007f', body: '#222831', accent: '#3f72af' },
             p40: { bg: '#1a1a24', surface: '#1f4068', title: '#e43f5a', body: '#e5e5e5', accent: '#162447' },
-            p41: { bg: '#1b1a17', surface: '#1f1e1b', title: '#ff8303', body: '#a35709', accent: '#f0e3ca' },
             p42: { bg: '#f8fafc', surface: '#ffffff', title: '#2c3e50', body: '#7f8c8d', accent: '#1abc9c' },
             p43: { bg: '#faf7f2', surface: '#ffffff', title: '#4f3b32', body: '#7a6255', accent: '#0284c7' },
             p44: { bg: '#222831', surface: '#393e46', title: '#eeeeee', body: '#b3e5fc', accent: '#00adb5' },
@@ -179,7 +172,6 @@
             p46: { bg: '#f4f7f6', surface: '#ffffff', title: '#0f3057', body: '#438a5e', accent: '#e7e7de' },
             p47: { bg: '#f0f8ff', surface: '#ffffff', title: '#005086', body: '#318fb5', accent: '#b0deff' },
             p48: { bg: '#2d0c2c', surface: '#c2185b', title: '#f3c623', body: '#f7f7f7', accent: '#880e4f' },
-            p49: { bg: '#120136', surface: '#321555', title: '#400082', body: '#ffffff', accent: '#00bbf9' },
             p50: { bg: '#111625', surface: '#1e293b', title: '#38bdf8', body: '#94a3b8', accent: '#0f172a' }
         };
 
