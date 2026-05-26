@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualiseur des 50 Palettes</title>
+    <title>Visualiseur de Thèmes et Métiers</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Palette 1 par défaut */
@@ -15,106 +15,121 @@
 <body class="transition-all duration-300 min-h-screen p-4 md:p-8" style="background-color: var(--bg); color: var(--body);">
 
     <div class="max-w-5xl mx-auto">
-        <header class="flex flex-col md:flex-row justify-between items-center mb-8 p-6 rounded-2xl shadow-sm border border-black/5" style="background-color: var(--surface);">
+        <header class="flex flex-col md:flex-row gap-4 justify-between items-center mb-8 p-6 rounded-2xl shadow-sm border border-black/5" style="background-color: var(--surface);">
             <div>
-                <h1 class="text-2xl font-bold mb-1" style="color: var(--title);">Simulateur de Thèmes</h1>
-                <p class="text-xs opacity-80">Testez les 50 palettes en temps réel</p>
+                <h1 class="text-2xl font-bold mb-1" style="color: var(--title);">Simulateur Artisan One-Page</h1>
+                <p class="text-xs opacity-80">Associez un exemple de métier avec la palette de votre choix</p>
             </div>
             
-            <div class="mt-4 md:mt-0 w-full md:w-80">
-                <label for="palette-selector" class="block text-xs font-semibold uppercase tracking-wider mb-1">Sélectionner une palette :</label>
-                <select id="palette-selector" class="p-2.5 w-full border rounded-xl bg-white text-gray-900 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <option value="p1">1. Coloré et équilibré</option>
-                    <option value="pa">PAYSAGISTE / JARDINIER (Ambiance : Nature, Confiance, Écologie)</option>
-                    <option value="pb">FLEURISTE / PÉPINIÉRISTE (Ambiance : Élégance, Créativité, Fraîcheur)</option>
-                    <option value="pc">PLOMBIER / CHAUFFAGISTE (Ambiance : Urgence, Eau, Sécurité)</option>
-                    <option value="pd">ÉLECTRICIEN (Ambiance : Énergie, Précision, Technologie)</option>
-                    <option value="pe">MAÇON / PEINTRE / MENUISIER (Ambiance : Chantier, Solide, Matière)</option>
-                    <option value="pf">THÈME GÉNÉRIQUE POLYVALENT (Pour n'importe quel autre artisan)</option>
-                    <option value="p2">2. Couleurs vives</option>
-                    <option value="p3">3. Naturel et terreux</option>
-                    <option value="p7">7. Élégant et sophistiqué</option>
-                    <option value="p9">9. Violets et bleu profond</option>
-                    <option value="p10">10. Contemporain et audacieux</option>
-                    <option value="p11">11. Animé et invitant</option>
-                    <option value="p12">12. Frappant et simple</option>
-                    <option value="p13">13. Couleur Rouge et vif</option>
-                    <option value="p15">15. Élégante mais accessible</option>
-                    <option value="p16">16. Élégant et futuriste</option>
-                    <option value="p18">18. Texturé et dynamique</option>
-                    <option value="p19">19. Minimal mais chaleureux</option>
-                    <option value="p20">20. Vif et net</option>
-                    <option value="p21">21. Propre et énergique</option>
-                    <option value="p22">22. Corporatif et traditionnel</option>
-                    <option value="p23">23. Bleu et rafraîchissant</option>
-                    <option value="p24">24. Claire et moderne</option>
-                    <option value="p25">25. Vibrant et élégant</option>
-                    <option value="p26">26. Éclat de jeunesse</option>
-                    <option value="p29">29. Tech haut de gamme</option>
-                    <option value="p30">30. Minimalisme scandinave</option>
-                    <option value="p31">31. Fruits des bois</option>
-                    <option value="p32">32. Énergie pop</option>
-                    <option value="p33">33. Style corporate moderne</option>
-                    <option value="p34">34. Douceur d'automne</option>
-                    <option value="p35">35. Glamour et luxe</option>
-                    <option value="p36">36. Écologique & Bio</option>
-                    <option value="p37">37. Lumineux & Énergique</option>
-                    <option value="p38">38. Enneigé mais chaud</option>
-                    <option value="p39">39. Riche et coloré</option>
-                    <option value="p40">40. Moderne et minimaliste</option>
-                    <option value="p42">42. Couleurs linéaires (Flat)</option>
-                    <option value="p43">43. Éclectique et paisible</option>
-                    <option value="p44">44. Chic et traditionnel</option>
-                    <option value="p45">45. Des couleurs pop</option>
-                    <option value="p46">46. Professionnel et sage</option>
-                    <option value="p47">47. Menthe Glaciale</option>
-                    <option value="p48">48. Sunset Gold</option>
-                    <option value="p50">50. Slate minimal dark</option>
-                </select>
+            <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                <!-- SÉLECTEUR DE MÉTIER -->
+                <div class="w-full sm:w-56">
+                    <label for="job-selector" class="block text-xs font-semibold uppercase tracking-wider mb-1">1. Métier exemple :</label>
+                    <select id="job-selector" class="p-2.5 w-full border rounded-xl bg-white text-gray-900 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="jardinier">🏡 Jardinier / Paysagiste</option>
+                        <option value="plombier">🚰 Plombier / Chauffagiste</option>
+                        <option value="electricien">⚡ Électricien Pro</option>
+                        <option value="fleuriste">💐 Fleuriste / Pépiniériste</option>
+                    </select>
+                </div>
+
+                <!-- SÉLECTEUR DE PALETTE RECLASSÉ -->
+                <div class="w-full sm:w-64">
+                    <label for="palette-selector" class="block text-xs font-semibold uppercase tracking-wider mb-1">2. Palette de couleurs :</label>
+                    <select id="palette-selector" class="p-2.5 w-full border rounded-xl bg-white text-gray-900 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="p1">1. Coloré et équilibré</option>
+                        <option value="p2">2. Paysagiste (Conseillé)</option>
+                        <option value="p3">3. Fleuriste (Conseillé)</option>
+                        <option value="p4">4. Plombier (Conseillé)</option>
+                        <option value="p5">5. Électricien (Conseillé)</option>
+                        <option value="p6">6. Maçon / Peintre</option>
+                        <option value="p7">7. Thème Générique Artisan</option>
+                        <option value="p8">8. Couleurs vives</option>
+                        <option value="p9">9. Naturel et terreux</option>
+                        <option value="p10">10. Élégant et sophistiqué</option>
+                        <option value="p11">11. Violets et bleu profond</option>
+                        <option value="p12">12. Contemporain et audacieux</option>
+                        <option value="p13">13. Animé et invitant</option>
+                        <option value="p14">14. Frappant et simple</option>
+                        <option value="p15">15. Couleur Rouge et vif</option>
+                        <option value="p16">16. Élégante mais accessible</option>
+                        <option value="p17">17. Élégant et futuriste</option>
+                        <option value="p18">18. Texturé et dynamique</option>
+                        <option value="p19">19. Minimal mais chaleureux</option>
+                        <option value="p20">20. Vif et net</option>
+                        <option value="p21">21. Propre et énergique</option>
+                        <option value="p22">22. Corporatif et traditionnel</option>
+                        <option value="p23">23. Bleu et rafraîchissant</option>
+                        <option value="p24">24. Claire et moderne</option>
+                        <option value="p25">25. Vibrant et élégant</option>
+                        <option value="p26">26. Éclat de jeunesse</option>
+                        <option value="p27">27. Tech haut de gamme</option>
+                        <option value="p28">28. Minimalisme scandinave</option>
+                        <option value="p29">29. Fruits des bois</option>
+                        <option value="p30">30. Énergie pop</option>
+                        <option value="p31">31. Style corporate moderne</option>
+                        <option value="p32">32. Douceur d'automne</option>
+                        <option value="p33">33. Glamour et luxe</option>
+                        <option value="p34">34. Écologique & Bio</option>
+                        <option value="p35">35. Lumineux & Énergique</option>
+                        <option value="p36">36. Enneigé mais chaud</option>
+                        <option value="p37">37. Riche et coloré</option>
+                        <option value="p38">38. Moderne et minimaliste</option>
+                        <option value="p39">39. Couleurs linéaires (Flat)</option>
+                        <option value="p40">40. Éclectique et paisible</option>
+                        <option value="p41">41. Slate minimal dark</option>
+                    </select>
+                </div>
             </div>
         </header>
 
+        <!-- ZONE PRESTATIONS & ACCROCHE -->
         <main class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div class="md:col-span-2 p-8 rounded-3xl shadow-sm border border-black/5" style="background-color: var(--surface);">
                 <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 text-white" style="background-color: var(--accent);">
-                    Nouveau Thème Appliqué
+                    Disponible à proximité • Devis Gratuit
                 </span>
-                <h2 class="text-3xl font-extrabold mb-4" style="color: var(--title);">Exemple de titre H2 d'une section</h2>
-                <p class="mb-6 leading-relaxed text-base">
-                    Voici un texte de paragraphe standard pour analyser l'harmonie et la lisibilité globale. Lorsque vous choisissez un style dans la liste, le contraste s'ajuste instantanément.
-                </p>
-                <div class="flex gap-4">
+                <h2 id="job-title" class="text-3xl font-extrabold mb-4" style="color: var(--title);">Chargement...</h2>
+                <p id="job-desc" class="mb-6 leading-relaxed text-base">Chargement des données...</p>
+                
+                <h4 class="font-bold uppercase text-xs tracking-wider mb-3 opacity-70">Nos interventions fréquentes :</h4>
+                <ul id="job-services" class="space-y-2 mb-6 text-sm font-medium">
+                    <!-- Généré dynamiquement -->
+                </ul>
+
+                <div class="flex flex-wrap gap-4">
                     <button class="px-6 py-3 rounded-xl font-bold text-white shadow-sm transition-transform hover:scale-[1.02]" style="background-color: var(--accent);">
-                        Bouton principal
+                        Demander un devis
                     </button>
                     <button class="px-6 py-3 rounded-xl font-semibold border bg-transparent transition-opacity hover:opacity-80" style="border-color: var(--accent); color: var(--accent);">
-                        Bouton secondaire
+                        Nous appeler
                     </button>
                 </div>
             </div>
 
+            <!-- ZONE AVIS GOOGLE EXEMPLES -->
             <div class="p-8 rounded-3xl shadow-sm border border-black/5 flex flex-col justify-between" style="background-color: var(--surface);">
                 <div>
-                    <h3 class="text-xl font-bold mb-2" style="color: var(--title);">Données clés</h3>
-                    <p class="text-sm opacity-90 mb-6">Visualisation de l'intégration de la couleur d'accentuation sur des éléments d'interface fins.</p>
-                    
-                    <div class="space-y-3">
-                        <div class="w-full bg-black/5 h-2 rounded-full overflow-hidden">
-                            <div class="h-full w-3/4 rounded-full" style="background-color: var(--accent);"></div>
-                        </div>
-                        <div class="w-full bg-black/5 h-2 rounded-full overflow-hidden">
-                            <div class="h-full w-1/2 rounded-full" style="background-color: var(--accent);"></div>
-                        </div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-lg font-bold">Avis Google</span>
+                        <span class="text-amber-500 flex">★★★★★</span>
                     </div>
+                    
+                    <div id="google-review" class="p-4 rounded-2xl bg-black/5 border border-black/5 italic text-sm mb-4">
+                        <!-- Généré dynamiquement -->
+                    </div>
+                    
+                    <p class="text-xs opacity-70">Avis réels synchronisés depuis la fiche Google Business de l'artisan.</p>
                 </div>
 
                 <div class="pt-6 border-t border-black/5 mt-6 flex items-center justify-between">
-                    <span class="text-xs font-mono tracking-tight opacity-75">Statut de la charte</span>
+                    <span class="text-xs font-mono tracking-tight opacity-75">Note globale : 4.9/5</span>
                     <div class="w-3 h-3 rounded-full animate-pulse" style="background-color: var(--accent);"></div>
                 </div>
             </div>
         </main>
 
+        <!-- CODE COULEURS -->
         <footer class="p-6 rounded-2xl border border-black/5 flex flex-wrap gap-4 items-center justify-around" style="background-color: var(--surface);">
             <div class="text-center"><span class="block text-xs uppercase font-bold opacity-60">Fond</span><code id="code-bg" class="text-sm font-mono font-bold"></code></div>
             <div class="text-center"><span class="block text-xs uppercase font-bold opacity-60">Surface</span><code id="code-surface" class="text-sm font-mono font-bold"></code></div>
@@ -125,25 +140,25 @@
     </div>
 
     <script>
-        // BASE DE DONNÉES COMPLÈTE DES 50 PALETTES EXACTES DE VISME
+        // BASE DE DONNÉES COMPLÈTE RECLASSÉE (1 à 41)
         const palettes = {
             p1: { bg: '#f7f9fa', surface: '#ffffff', title: '#e27d60', body: '#4a5a64', accent: '#41b3a3' },
-            pa: { bg: '#f4f7f5', surface: '#ffffff', title: '#1e3f20', body: '#4a554d', accent: '#2e7d32' },
-            pb: { bg: '#faf6f0', surface: '#ffffff', title: '#4a283d', body: '#6b5b65', accent: '#d4a373' },
-            pc: { bg: '#f0f4f8', surface: '#ffffff', title: '#0f2d4a', body: '#48535e', accent: '#0070f3' },
-            pd: { bg: '#111827', surface: '#1f2937', title: '#ffffff', body: '#9ca3af', accent: '#f59e0b' },
-            pe: { bg: '#fcfbf9', surface: '#ffffff', title: '#292524', body: '#57534e', accent: '#ea580c' },
-            pf: { bg: '#f8fafc', surface: '#ffffff', title: '#0f172a', body: '#334155', accent: '#0d9488' },
-            p2: { bg: '#edf5e1', surface: '#2f2fa2', title: '#ffffff', body: '#379683', accent: '#5cdb95' },
-            p3: { bg: '#ffeec1', surface: '#96ceb4', title: '#ff6f69', body: '#2d3a3a', accent: '#ffcc5c' },
-            p7: { bg: '#1d2731', surface: '#393f4d', title: '#fbeec1', body: '#eed9c4', accent: '#66757f' },
-            p9: { bg: '#000000', surface: '#151515', title: '#ff8303', body: '#a35709', accent: '#2a2a2a' },
-            p10: { bg: '#50514f', surface: '#70c1b3', title: '#f25f5c', body: '#ffe066', accent: '#247ba0' },
-            p11: { bg: '#19181a', surface: '#2f2fa2', title: '#f64c72', body: '#d3a625', accent: '#bc4639' },
-            p12: { bg: '#111111', surface: '#333333', title: '#0055ff', body: '#ffffff', accent: '#555555' },
-            p13: { bg: '#f4f4f4', surface: '#ffffff', title: '#d21f3c', body: '#1a1a1a', accent: '#990011' },
-            p15: { bg: '#f5f5f5', surface: '#ffffff', title: '#1e3d59', body: '#17b978', accent: '#ff6f3c' },
-            p16: { bg: '#0f172a', surface: '#1e293b', title: '#38bdf8', body: '#94a3b8', accent: '#ff7e67' },
+            p2: { bg: '#f4f7f5', surface: '#ffffff', title: '#1e3f20', body: '#4a554d', accent: '#2e7d32' }, // Paysagiste
+            p3: { bg: '#faf6f0', surface: '#ffffff', title: '#4a283d', body: '#6b5b65', accent: '#d4a373' }, // Fleuriste
+            p4: { bg: '#f0f4f8', surface: '#ffffff', title: '#0f2d4a', body: '#48535e', accent: '#0070f3' }, // Plombier
+            p5: { bg: '#111827', surface: '#1f2937', title: '#ffffff', body: '#9ca3af', accent: '#f59e0b' }, // Electricien
+            p6: { bg: '#fcfbf9', surface: '#ffffff', title: '#292524', body: '#57534e', accent: '#ea580c' }, // Maçon
+            p7: { bg: '#f8fafc', surface: '#ffffff', title: '#0f172a', body: '#334155', accent: '#0d9488' }, // Générique
+            p8: { bg: '#edf5e1', surface: '#2f2fa2', title: '#ffffff', body: '#379683', accent: '#5cdb95' },
+            p9: { bg: '#ffeec1', surface: '#96ceb4', title: '#ff6f69', body: '#2d3a3a', accent: '#ffcc5c' },
+            p10: { bg: '#1d2731', surface: '#393f4d', title: '#fbeec1', body: '#eed9c4', accent: '#66757f' },
+            p11: { bg: '#000000', surface: '#151515', title: '#ff8303', body: '#a35709', accent: '#2a2a2a' },
+            p12: { bg: '#50514f', surface: '#70c1b3', title: '#f25f5c', body: '#ffe066', accent: '#247ba0' },
+            p13: { bg: '#19181a', surface: '#2f2fa2', title: '#f64c72', body: '#d3a625', accent: '#bc4639' },
+            p14: { bg: '#111111', surface: '#333333', title: '#0055ff', body: '#ffffff', accent: '#555555' },
+            p15: { bg: '#f4f4f4', surface: '#ffffff', title: '#d21f3c', body: '#1a1a1a', accent: '#990011' },
+            p16: { bg: '#f5f5f5', surface: '#ffffff', title: '#1e3d59', body: '#17b978', accent: '#ff6f3c' },
+            p17: { bg: '#0f172a', surface: '#1e293b', title: '#38bdf8', body: '#94a3b8', accent: '#ff7e67' },
             p18: { bg: '#1c1c1c', surface: '#2d142c', title: '#e11d48', body: '#a0a0a0', accent: '#801336' },
             p19: { bg: '#f4eedb', surface: '#ffffff', title: '#2b2927', body: '#5c5854', accent: '#d9383a' },
             p20: { bg: '#120924', surface: '#2c003e', title: '#fe346e', body: '#cbd5e1', accent: '#512b58' },
@@ -153,32 +168,56 @@
             p24: { bg: '#e8ffff', surface: '#ffffff', title: '#056676', body: '#00adb5', accent: '#a3de83' },
             p25: { bg: '#222831', surface: '#393e46', title: '#00adb5', body: '#eeeeee', accent: '#ff5722' },
             p26: { bg: '#f4f4f4', surface: '#ffffff', title: '#ff414d', body: '#1a1a24', accent: '#242582' },
-            p29: { bg: '#0d0d0d', surface: '#1a1a1a', title: '#ffffff', body: '#cccccc', accent: '#ff0055' },
-            p30: { bg: '#eff0f3', surface: '#ffffff', title: '#0d0d0d', body: '#2a2a2a', accent: '#ff5e62' },
-            p31: { bg: '#fbeeed', surface: '#ffffff', title: '#4a0e17', body: '#721c24', accent: '#b91c1c' },
-            p32: { bg: '#ffffff', surface: '#f8fafc', title: '#fc913a', body: '#468966', accent: '#f9d423' },
-            p33: { bg: '#f4f6f9', surface: '#ffffff', title: '#1e2022', body: '#686d76', accent: '#3772ff' },
-            p34: { bg: '#fff9f4', surface: '#ffffff', title: '#6e3b3b', body: '#914e4e', accent: '#e8a87c' },
-            p35: { bg: '#111111', surface: '#222222', title: '#d4af37', body: '#e5e5e5', accent: '#aa771c' },
-            p36: { bg: '#f4f9f4', surface: '#ffffff', title: '#2b4f43', body: '#4a7c59', accent: '#90be6d' },
-            p37: { bg: '#f0fdfa', surface: '#ffffff', title: '#00d2c4', body: '#007a87', accent: '#f97316' },
-            p38: { bg: '#1b262c', surface: '#0f4c75', title: '#bbe1fa', body: '#cbd5e1', accent: '#3282b8' },
-            p39: { bg: '#ffffff', surface: '#fdf2f8', title: '#ff007f', body: '#222831', accent: '#3f72af' },
-            p40: { bg: '#1a1a24', surface: '#1f4068', title: '#e43f5a', body: '#e5e5e5', accent: '#162447' },
-            p42: { bg: '#f8fafc', surface: '#ffffff', title: '#2c3e50', body: '#7f8c8d', accent: '#1abc9c' },
-            p43: { bg: '#faf7f2', surface: '#ffffff', title: '#4f3b32', body: '#7a6255', accent: '#0284c7' },
-            p44: { bg: '#222831', surface: '#393e46', title: '#eeeeee', body: '#b3e5fc', accent: '#00adb5' },
-            p45: { bg: '#1b003a', surface: '#350068', title: '#ffffff', body: '#b983ff', accent: '#ff007f' },
-            p46: { bg: '#f4f7f6', surface: '#ffffff', title: '#0f3057', body: '#438a5e', accent: '#e7e7de' },
-            p47: { bg: '#f0f8ff', surface: '#ffffff', title: '#005086', body: '#318fb5', accent: '#b0deff' },
-            p48: { bg: '#2d0c2c', surface: '#c2185b', title: '#f3c623', body: '#f7f7f7', accent: '#880e4f' },
-            p50: { bg: '#111625', surface: '#1e293b', title: '#38bdf8', body: '#94a3b8', accent: '#0f172a' }
+            p27: { bg: '#0d0d0d', surface: '#1a1a1a', title: '#ffffff', body: '#cccccc', accent: '#ff0055' },
+            p28: { bg: '#eff0f3', surface: '#ffffff', title: '#0d0d0d', body: '#2a2a2a', accent: '#ff5e62' },
+            p29: { bg: '#fbeeed', surface: '#ffffff', title: '#4a0e17', body: '#721c24', accent: '#b91c1c' },
+            p30: { bg: '#ffffff', surface: '#f8fafc', title: '#fc913a', body: '#468966', accent: '#f9d423' },
+            p31: { bg: '#f4f6f9', surface: '#ffffff', title: '#1e2022', body: '#686d76', accent: '#3772ff' },
+            p32: { bg: '#fff9f4', surface: '#ffffff', title: '#6e3b3b', body: '#914e4e', accent: '#e8a87c' },
+            p33: { bg: '#111111', surface: '#222222', title: '#d4af37', body: '#e5e5e5', accent: '#aa771c' },
+            p34: { bg: '#f4f9f4', surface: '#ffffff', title: '#2b4f43', body: '#4a7c59', accent: '#90be6d' },
+            p35: { bg: '#f0fdfa', surface: '#ffffff', title: '#00d2c4', body: '#007a87', accent: '#f97316' },
+            p36: { bg: '#1b262c', surface: '#0f4c75', title: '#bbe1fa', body: '#cbd5e1', accent: '#3282b8' },
+            p37: { bg: '#ffffff', surface: '#fdf2f8', title: '#ff007f', body: '#222831', accent: '#3f72af' },
+            p38: { bg: '#1a1a24', surface: '#1f4068', title: '#e43f5a', body: '#e5e5e5', accent: '#162447' },
+            p39: { bg: '#f8fafc', surface: '#ffffff', title: '#2c3e50', body: '#7f8c8d', accent: '#1abc9c' },
+            p40: { bg: '#faf7f2', surface: '#ffffff', title: '#4f3b32', body: '#7a6255', accent: '#0284c7' },
+            p41: { bg: '#111625', surface: '#1e293b', title: '#38bdf8', body: '#94a3b8', accent: '#0f172a' }
         };
 
-        const selector = document.getElementById('palette-selector');
+        // CONTENUS TEXTUELS EXEMPLES PAR MÉTIER
+        const jobs = {
+            jardinier: {
+                title: "Création de Jardins & Entretien d'Espaces Verts",
+                desc: "Paysagiste passionné à votre service pour transformer vos extérieurs. Nous concevons des espaces harmonieux adaptés à vos envies et assurons l'entretien complet de vos pelouses, haies et massifs.",
+                services: ["Aménagement paysager sur-mesure", "Tonte de pelouse & Taille de haies", "Élagage & Soin des arbres", "Installation de systèmes d'arrosage"],
+                review: "« Un travail d'orfèvre pour la réfection complète de notre pelouse et la taille des grands arbres. Équipe ponctuelle, polie et chantier impeccable. Je recommande vivement ! »<br><strong class='mt-2 block text-xs not-italic text-right'>— Pierre D.</strong>"
+            },
+            plombier: {
+                title: "Dépannage Plomberie & Chauffage 7j/7",
+                desc: "Besoin d'une intervention rapide pour une fuite, un problème de chaudière ou une rénovation ? Artisan plombier certifié, j'interviens rapidement à votre domicile avec un diagnostic transparent et honnête.",
+                services: ["Recherche & Réparation de fuites d'eau", "Remplacement de chauffe-eau", "Débouchage de canalisations d'urgence", "Installation & Rénovation de salle de bain"],
+                review: "« Intervention en moins de 45 minutes un samedi soir pour une fuite d'eau majeure sous l'évier. Tarif annoncé avant travaux et respecté. Un vrai professionnel ! »<br><strong class='mt-2 block text-xs not-italic text-right'>— Marc L.</strong>"
+            },
+            electricien: {
+                title: "Installations Électriques & Remise aux Normes",
+                desc: "Sécurisez et modernisez votre habitat. De la mise en conformité de votre tableau électrique à l'installation de votre domotique et bornes de recharge pour véhicules, profitez d'un travail propre et garanti.",
+                services: ["Rénovation & Remise aux normes (NF C 15-100)", "Dépannage de pannes électriques", "Installation d'éclairages LED & Domotique", "Pose de bornes de recharge VE"],
+                review: "« Excellente prestation pour le remplacement complet de notre vieux tableau électrique. Très pédagogue, il a pris le temps de tout expliquer. Top sécurité. »<br><strong class='mt-2 block text-xs not-italic text-right'>— Sophie R.</strong>"
+            },
+            fleuriste: {
+                title: "Artisan Fleuriste & Créations Événementielles",
+                desc: "Des bouquets uniques composés de fleurs fraîches et de saison. Nous vous accompagnons pour fleurir tous les moments importants de votre vie : mariages, anniversaires, fêtes ou simplement pour le plaisir d'offrir.",
+                services: ["Bouquets de saison personnalisés", "Décoration florale pour mariages & événements", "Abonnements de fleurs pour entreprises", "Plantes d'intérieur et conseils d'entretien"],
+                review: "« Les compositions pour notre mariage étaient tout simplement splendides ! À l'écoute de nos moindres demandes, créative et d'une grande gentillesse. »<br><strong class='mt-2 block text-xs not-italic text-right'>— Amandine T.</strong>"
+            }
+        };
+
+        const paletteSelector = document.getElementById('palette-selector');
+        const jobSelector = document.getElementById('job-selector');
         const root = document.documentElement;
 
-        // Fonction de mise à jour des textes de débogage sous le site
+        // Fonction d'affichage des libellés de couleur
         function updateFooterLabels(theme) {
             document.getElementById('code-bg').innerText = theme.bg;
             document.getElementById('code-surface').innerText = theme.surface;
@@ -187,8 +226,26 @@
             document.getElementById('code-accent').innerText = theme.accent;
         }
 
-        // Actionneur au changement du menu déroulant
-        selector.addEventListener('change', (e) => {
+        // Fonction d'affichage du contenu métier
+        function updateJobContent(jobKey) {
+            const data = jobs[jobKey];
+            document.getElementById('job-title').innerText = data.title;
+            document.getElementById('job-desc').innerText = data.desc;
+            document.getElementById('google-review').innerHTML = data.review;
+            
+            // Liste des services
+            const listContainer = document.getElementById('job-services');
+            listContainer.innerHTML = "";
+            data.services.forEach(service => {
+                const li = document.createElement('li');
+                li.className = "flex items-center gap-2";
+                li.innerHTML = `<span style="color: var(--accent);">✔</span> ${service}`;
+                listContainer.appendChild(li);
+            });
+        }
+
+        // Événement changement de palette
+        paletteSelector.addEventListener('change', (e) => {
             const selected = palettes[e.target.value];
             root.style.setProperty('--bg', selected.bg);
             root.style.setProperty('--surface', selected.surface);
@@ -198,8 +255,14 @@
             updateFooterLabels(selected);
         });
 
-        // Initialisation avec la première palette au chargement
+        // Événement changement de métier
+        jobSelector.addEventListener('change', (e) => {
+            updateJobContent(e.target.value);
+        });
+
+        // Initialisation globale au chargement
         updateFooterLabels(palettes.p1);
+        updateJobContent('jardinier');
     </script>
 </body>
 </html>
